@@ -1,0 +1,22 @@
+volumes:
+  postgres_data:
+
+services:
+  pgdb_data:
+    image: postgres:alpine
+    container_name: pgdb_data_container
+    hostname: pgdb
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=magnet
+      - POSTGRES_USER=magnet
+      - POSTGRES_PASSWORD=magnet
+
