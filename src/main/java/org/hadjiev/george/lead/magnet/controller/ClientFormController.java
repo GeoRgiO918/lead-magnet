@@ -18,7 +18,7 @@ public class ClientFormController {
                                 Model model){
 
         PageConfig config = new PageConfig();
-        config.setTitle(slug);
+        config.setSlug(slug);
         model.addAttribute("page",config);
         return  "/buy/page";
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <!-- Логотип -->
+        <a href="/" class="logo" th:text="${site.name}">
+            Агент по недвижимости
+        </a>
+
+        <!-- Навигация -->
+        <nav class="main-nav">
+            <a href="#about">О проекте</a>
+            <a href="#projects">Новостройки</a>
+            <a href="#invest">Инвестиции</a>
+
+            <!-- SEO переходы -->
+            <div class="nav-group">
+                <span>Регионы</span>
+                <div class="nav-dropdown">
+                    <a th:href="@{/region/anapa}">Анапа</a>
+                    <a th:href="@{/region/sochi}">Сочи</a>
+                    <a th:href="@{/region/novorossiysk}">Новороссийск</a>
+                </div>
+            </div>
+
+            <a href="#contact">Контакты</a>
+        </nav>
+
+        <!-- Контакты агента -->
+        <div class="agent-contacts">
+            <a th:href="'tel:' + ${agent.phoneNumber}" th:text="${agent.phoneNumber}"></a>
+            <a th:href="${agent.telegram}" target="_blank">Telegram</a>
+            <a th:href="${agent.max}" target="_blank">MAX</a>
+        </div>
+
+    </div>
+</header>
+
+</body>
+</html>

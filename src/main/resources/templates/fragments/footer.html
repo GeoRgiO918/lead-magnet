@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="body">
+    <footer>
+        <p>Телефон: <span th:text="${agent.phoneNumber}">+7 900 000-00-00</span></p>
+        <p>Telegram: <a th:href="${agent.telegram}">Ссылка</a></p>
+        <p>Max: <a th:href="${agent.max}">Ссылка</a></p>
+    </footer>
+</div>
+</body>
+</html>

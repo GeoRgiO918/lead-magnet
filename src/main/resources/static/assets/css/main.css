@@ -1,0 +1,192 @@
+/* ===== Общие стили ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header ===== */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077cc;
+    text-decoration: none;
+}
+
+/* ===== Навигация ===== */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #0077cc;
+}
+
+/* ===== Dropdown для SEO ===== */
+.nav-group {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-group span {
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.nav-dropdown a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+}
+
+.nav-dropdown a:hover {
+    background: #f0f0f0;
+    color: #0077cc;
+}
+
+.nav-group:hover .nav-dropdown {
+    display: block;
+}
+
+/* ===== Контакты агента ===== */
+.agent-contacts {
+    display: flex;
+    gap: 15px;
+}
+
+.agent-contacts a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 500;
+}
+
+.agent-contacts a:hover {
+    text-decoration: underline;
+}
+/* ===== Main ===== */
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+footer a {
+    color: #f8f9fa;
+    margin: 0 10px;
+}
+
+/* ===== Form styles ===== */
+form {
+    background: #fff;
+    padding: 20px 30px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0077cc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background: #005fa3;
+    transform: scale(1.05);
+}
+
+/* ===== Animations ===== */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

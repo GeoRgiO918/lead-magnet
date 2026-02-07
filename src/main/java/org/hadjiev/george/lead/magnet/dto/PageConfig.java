@@ -2,13 +2,13 @@ package org.hadjiev.george.lead.magnet.dto;
 
 public class PageConfig {
 
-    private String title;
+    private String slug;
 
-    public String getTitle() {
-        return title;
+    public String getSlug() {
+        return slug;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 }
